@@ -33,6 +33,8 @@ Open Cadence Genus. Change to the ```synthesis``` folder
 
 Reports and outputs can be founded in the ```synthesis``` folder.
 
+
+
 Place and router
 ---------
 
@@ -47,7 +49,24 @@ Reports and outputs can be founded in the ```place-and-route``` folder.
 Result
 ---------
 
-The final layout for NANGATE 45nm
+#### Timing
+
+Period: 2.4 ns
+Arrival at 1.379 ns
+Slack: 1.021 ns
+Result: passed timing
+
+#### Area
+
+9 gates.
+2 DFFs => 4 states for S0, S1, S2, and S3
+State moves steadily => 1 Half adder is used
+
+#### Layout
+
+Only ultilze 60%
+
+The final layout for NANGATE 45nm 
 
 ![alt text](place-and-route/layout/ss_.place.gif "Layout")
 

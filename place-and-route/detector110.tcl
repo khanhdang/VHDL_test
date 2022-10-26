@@ -55,6 +55,8 @@ verifyGeometry -report ./reports/top.geo
 verify_drc   -report ./reports/top_soc.drc
 
 defOut -floorplan -netlist -routing ./output_files/$model_name.def
+write_sdf -interconn all -setuphold split ./output_files/$model_name.sdf
+rcOut -spef ./output_files/$model_name.spef
 saveNetlist ./output_files/$model_name.v
 
 puts "Finish!!!"

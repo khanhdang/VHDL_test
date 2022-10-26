@@ -1,7 +1,7 @@
 EDA Tool Test @ Univ. of Aizu
 ========
 
-This repo consists of a Moore FSM code for detecting "110" written in VHDL.
+This repo consists of a Moore FSM code for detecting "110" written in VHDL and Verilog HDL.
 Simulation script using ModelSim is include
 Synthesis (using Cadence Genus) and layout using (Cadence Innous) scripts and results are included.
 

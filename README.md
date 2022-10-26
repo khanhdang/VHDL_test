@@ -38,7 +38,7 @@ Reports and outputs can be founded in the ```synthesis``` folder.
 
 
 
-Place and router
+Place and route
 ---------
 
 Open Cadence Innovus. Change to the ```place-and-route``` folder

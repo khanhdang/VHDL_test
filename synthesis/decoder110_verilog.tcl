@@ -13,7 +13,7 @@ set_attribute lib_search_path {/home/lib/}
 set_attribute library [list typical.lib]
 set_attribute information_level 6 
 
-set myFiles [list detector110.vhd]         ;# All HDL files
+set myFiles [list detector110.v]         ;# All HDL files
 set basename detector110	         ;# name of top level module
 set myClk clk                    ;# clock name
 set myPeriod_ps 2400             ;# Clock period in ps
@@ -26,7 +26,6 @@ set runname net                  ;# name appended to output files
 #*********************************************************
 
 # Analyze and Elaborate the HDL files
-set_attribute hdl_language vhdl
 read_hdl ${myFiles}
 elaborate ${basename}
 
@@ -54,3 +53,5 @@ report power  > ./reports/${basename}_${runname}_power.rep
 # Write out the structural Verilog and sdc files
 write_hdl -mapped >  ./output_files/${basename}_${runname}.v
 write_sdc >  ./output_files/${basename}_${runname}.sdc
+
+puts "Finish !!!"

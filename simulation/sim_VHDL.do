@@ -7,10 +7,10 @@ vcom detector110_tester.vhd
 
 # simulate
 
-vsim -novopt work.detector110_tester
+vsim -voptargs="+acc" work.detector110_tester
 
-# xem song 
+# add wave to the view
 add wave /*
 
-# chay 100 ns
+# run the simulation
 run 200 ns

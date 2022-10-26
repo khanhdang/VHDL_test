@@ -12,15 +12,16 @@ architecture procedural of detector110 is
 
 -- Dinh nghia type cua state
 type state is (S0,S1,S2,S3);
-signal current: state := S0;
+signal current: state;
 
 begin
 
 process (clk) begin
-	if (clk = '0' and clk'event) then
-		if reset = '1' then
-			current <= S0;
-		else
+	if reset = '1' then
+		current <= S0;
+	else
+		if (clk = '0' and clk'event) then
+		
 			case current is
 				when S0 => 
 					if a = '1' then current <= S1;

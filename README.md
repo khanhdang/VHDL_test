@@ -1,4 +1,4 @@
-VHDL Test  for 2021I_ELT2041_23 @ VNU-UET
+EDA Tool Test @ Univ. of Aizu
 ========
 
 This repo consists of a Moore FSM code for detecting "110" written in VHDL.
@@ -16,20 +16,23 @@ prerequisite
 RTL code
 --------
 
-The register transfer level code of a FSM is decoder110.vhd on the ```rtl``` folder.
+The register transfer level code of a FSM is decoder110.vhd or decoder.v on the ```rtl``` folder.
 
 Simulation
 ---------
 
 To simulate, open ModelSim and change the directory to the ```simulation``` folder.
-Run ```do sim.do``` to run.
+Run ```do sim_VHDL.do``` to run the VHDL model.
+Or Run ```do sim_VHDL.do``` to run the verilog model.
 
 Synthesis
 ---------
 
 Open Cadence Genus. Change to the ```synthesis``` folder
 
-``` source decoder110.tcl```
+``` source decoder110_vhdl.tcl```
+or
+``` source decoder110_verilog.tcl```
 
 Reports and outputs can be founded in the ```synthesis``` folder.
 
@@ -73,9 +76,5 @@ The final layout for NANGATE 45nm
 Contact
 ------
 
-Course website: https://courses.uet.vnu.edu.vn/course/view.php?id=5856
-
-VNU Unviversity of Engineering and Technology
-Digital Electronics: 2021I_ELT2041_23
-
-khanh.n.dang@vnu.edu.vn
+Khanh N. Dang
+khanh@u-aizu.ac.jp

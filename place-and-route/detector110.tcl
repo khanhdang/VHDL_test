@@ -54,5 +54,7 @@ verifyConnectivity -type all -error 1000 -warning 50 -report ./reports/top.conne
 verifyGeometry -report ./reports/top.geo
 verify_drc   -report ./reports/top_soc.drc
 
-defOut -floorplan -netlist -routing ./output_files/LIF_neuron.def
-saveNetlist ./output_files/LIF_neuron.v
+defOut -floorplan -netlist -routing ./output_files/$model_name.def
+saveNetlist ./output_files/$model_name.v
+
+puts "Finish!!!"

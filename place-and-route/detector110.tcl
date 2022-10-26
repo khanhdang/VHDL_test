@@ -48,7 +48,7 @@ report_timing -unconstrained -delay_limit 20 > ./reports/timing_report_postCCopt
 
 routeDesign -globalDetail
 
-addFiller -prefix FILLER -cell FILLCELL_X1 FILLCELL_X2 FILLCELL_X3
+addFiller -prefix FILLER -cell FILLCELL_X1 FILLCELL_X2 FILLCELL_X4
 
 verifyConnectivity -type all -error 1000 -warning 50 -report ./reports/top.connect
 verifyGeometry -report ./reports/top.geo

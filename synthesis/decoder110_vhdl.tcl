@@ -54,3 +54,5 @@ report power  > ./reports/${basename}_${runname}_power.rep
 # Write out the structural Verilog and sdc files
 write_hdl -mapped >  ./output_files/${basename}_${runname}.v
 write_sdc >  ./output_files/${basename}_${runname}.sdc
+
+puts "Finish!!!"

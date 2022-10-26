@@ -26,7 +26,6 @@ set runname net                  ;# name appended to output files
 #*********************************************************
 
 # Analyze and Elaborate the HDL files
-set_attribute hdl_language vhdl
 read_hdl ${myFiles}
 elaborate ${basename}
 
@@ -54,3 +53,5 @@ report power  > ./reports/${basename}_${runname}_power.rep
 # Write out the structural Verilog and sdc files
 write_hdl -mapped >  ./output_files/${basename}_${runname}.v
 write_sdc >  ./output_files/${basename}_${runname}.sdc
+
+puts "Finish !!!"

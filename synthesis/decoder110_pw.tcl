@@ -47,8 +47,8 @@ external_delay -output $myOutDelay_ns -clock ${myClk} [find / -port ports_out/*]
 # fall/rise 400ps
 dc::set_clock_transition .4 $myClk
 
-read_vcd -static ../simulation/detector110_normal_activities.vcd
-# read_vcd -static ../simulation/detector110_0_activity.vcd
+# read_vcd -static ../simulation/detector110_normal_activities.vcd
+read_vcd -static ../simulation/detector110_0_activity.vcd
 
 # Specify Leakage Power Constraint
 set_attribute max_leakage_power 3.3 ${basename}

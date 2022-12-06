@@ -18,19 +18,19 @@ module TB_detector110;
    initial begin
       $dumpfile("detector110.vcd");
       $dumpvars(0, TB_detector110);
-
+      aa = 1'b0;
       rst_n = 1'b1;
       clk = 1'b0;
-      #(2*`CLK_PERIOD-1);
-      rst_n = 1'b0;
       #(1*`CLK_PERIOD-1);
-      aa = 1'b1;
-      #21;
-      aa = 1'b0;
-      #19;
-      aa = 1'b1;
-      #31;
-      aa = 1'b0;
+      rst_n = 1'b0;
+      // #(1*`CLK_PERIOD-1);
+      // aa = 1'b1;
+      // #(3*`CLK_PERIOD-1);
+      // aa = 1'b0;
+      // #(5*`CLK_PERIOD-1);
+      // aa = 1'b1;
+      // #(1*`CLK_PERIOD-1);
+      // aa = 1'b0;
       
       if (_QUIT == 1)
 	$finish;

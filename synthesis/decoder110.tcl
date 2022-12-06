@@ -13,7 +13,7 @@ set_attribute lib_search_path {/home/lib/}
 set_attribute library [list typical.lib]
 set_attribute information_level 6 
 
-set myFiles [list detector110.vhd]         ;# All HDL files
+set myFiles [list detector110.v]         ;# All HDL files
 set basename detector110	         ;# name of top level module
 set myClk clk                    ;# clock name
 set myPeriod_ps 2400             ;# Clock period in ps
@@ -26,7 +26,7 @@ set runname net                  ;# name appended to output files
 #*********************************************************
 
 # Analyze and Elaborate the HDL files
-set_attribute hdl_language vhdl
+# set_attribute hdl_language vhdl
 read_hdl ${myFiles}
 elaborate ${basename}
 

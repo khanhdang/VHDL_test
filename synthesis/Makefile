@@ -7,5 +7,5 @@ power:
 	tee run_pw.decoder110.`date +%Y-%m-%d-%H%M%S`.log
 
 clean:
-	rm -rf WORK reports reuslts *.log genus.* output_files *~ fv
+	rm -rf WORK reports reuslts *.log genus.* output_files *~ fv output_files_pw reports_pw
 .PHONY: clean

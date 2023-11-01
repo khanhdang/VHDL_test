@@ -2,10 +2,14 @@
 
 ## Enabling environment variables
 
-To be able to run Modelsim, you must activate the path:
+To be able to run Modelsim, you must activate the path using the script.
+
+On `zxp007` (CAD server), you can:
+
+
 
 ```
-source env.sh
+source /home/share/cad_sh/vsim.sh
 ```
 
 Now, the command `vsim` can be executed

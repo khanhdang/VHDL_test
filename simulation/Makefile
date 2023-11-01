@@ -1,7 +1,8 @@
 RTL_DIR := ../rtl
+TB_DIR := ../testbench
 PS_RTL_DIR := ../synthesis/output_files
 PS_RTL := detector110_net.v
-TB_DIR := ../simulation
+SIM_DIR := ../simulation
 STD_CELL_LIB = /home/doanh/Work/NASH-main/Tutorial/SNPC/LIB/NangateOpenCellLibrary.v
 
 init:
@@ -22,5 +23,5 @@ post-syn:
 		-c -do "log -r *; run -a; add wave *; exit"
 
 clean:
-	rm -rf ./modelsim.ini $(RTL_DIR)/modelsim.ini $(TB_DIR)/modelsim.ini \
+	rm -rf ./modelsim.ini $(RTL_DIR)/modelsim.ini $(SIM_DIR)/modelsim.ini \
 		./transcript ./work/ ./vsim* ./*\~ ./*.wlf

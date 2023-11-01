@@ -3,7 +3,7 @@ vmap work work
 
 # compile
 vcom ../rtl/detector110.vhd
-vcom detector110_tester.vhd
+vcom ../testbench/detector110_tester.vhd
 
 # simulate
 

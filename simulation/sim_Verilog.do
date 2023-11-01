@@ -3,7 +3,7 @@ vmap work work
 
 # compile
 vlog ../rtl/detector110.v
-vcom detector110_tester.vhd
+vlog ../testbench/detector110_tester.v
 
 # simulate
 

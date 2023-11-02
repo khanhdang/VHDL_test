@@ -10,7 +10,9 @@ On `zxp007` (CAD server), you can:
 source /home/share/cad_sh/cad.sh
 ```
 
-Now, the command `vsim` can be executed
+Now, the command `genus` can be executed.
+
+
 
 ## Makefile
 

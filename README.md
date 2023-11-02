@@ -23,7 +23,10 @@ Simulation
 
 To simulate, open ModelSim and change the directory to the ```simulation``` folder.
 Run ```do sim_VHDL.do``` to run the VHDL model.
-Or Run ```do sim_VHDL.do``` to run the verilog model.
+Or Run ```do sim_Verilog.do``` to run the verilog model.
+
+
+Note: Makefile is included
 
 Synthesis
 ---------
@@ -36,6 +39,7 @@ or
 
 Reports and outputs can be founded in the ```synthesis``` folder.
 
+Note: Makefile is included
 
 
 Place and route
@@ -47,6 +51,7 @@ Open Cadence Innovus. Change to the ```place-and-route``` folder
 
 Reports and outputs can be founded in the ```place-and-route``` folder.
 
+Note: Makefile is included
 
 
 Result

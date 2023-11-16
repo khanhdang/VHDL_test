@@ -1,7 +1,7 @@
 `define CLK_PERIOD 2000
 
-module TB_detector110;
-   parameter _QUIT = 1;
+module detector110_tester;
+   parameter _QUIT = 0;
    reg clk;
    reg rst_n;
    reg aa;
@@ -17,29 +17,27 @@ module TB_detector110;
 
    initial begin
       $dumpfile("detector110.vcd");
-      $dumpvars(0, TB_detector110);
+      $dumpvars(0, detector110_tester);
       aa = 1'b0;
       rst_n = 1'b1;
       clk = 1'b0;
-      #(1*`CLK_PERIOD-1);
+      #(3*`CLK_PERIOD);
       rst_n = 1'b0;
-      // #(1*`CLK_PERIOD-1);
-      // aa = 1'b1;
-      // #(3*`CLK_PERIOD-1);
-      // aa = 1'b0;
-      // #(5*`CLK_PERIOD-1);
-      // aa = 1'b1;
-      // #(1*`CLK_PERIOD-1);
-      // aa = 1'b0;
-      
+
+      #(1*`CLK_PERIOD);
+      aa = 1'b1;
+      #(3*`CLK_PERIOD);
+      aa = 1'b0;
+      #(5*`CLK_PERIOD);
+      aa = 1'b1;
+      #(1*`CLK_PERIOD);
+      aa = 1'b0;
+
       if (_QUIT == 1)
-	$finish;
-      else 
-	$stop;
+          $finish;
+      else
+          $stop;
    end
 
    always #(`CLK_PERIOD/2) clk = ~clk;
-   // always #(`CLK_PERIOD/2) clk = 0;
-   
-		    
 endmodule // TB_detector110

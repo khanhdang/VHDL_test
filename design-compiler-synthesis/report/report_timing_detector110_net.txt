@@ -1,0 +1,50 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : detector110
+Version: Q-2019.12-SP4
+Date   : Thu Nov 23 21:35:23 2023
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: a (input port clocked by clk)
+  Endpoint: state_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  detector110        5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  a (in)                                   0.00       0.10 f
+  U15/ZN (XNOR2_X1)                        0.06       0.16 f
+  U14/ZN (AOI22_X1)                        0.04       0.20 r
+  U13/ZN (NOR2_X1)                         0.02       0.22 f
+  state_reg[0]/D (DFF_X1)                  0.01       0.23 f
+  data arrival time                                   0.23
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  clock uncertainty                        0.00       2.00
+  state_reg[0]/CK (DFF_X1)                 0.00       2.00 r
+  library setup time                      -0.04       1.96
+  data required time                                  1.96
+  -----------------------------------------------------------
+  data required time                                  1.96
+  data arrival time                                  -0.23
+  -----------------------------------------------------------
+  slack (MET)                                         1.72
+
+
+1

@@ -21,26 +21,20 @@ set src_folder "../rtl"
 set InDelay_ns 0.1             
 set OutDelay_ns 0.1            
 set clkUncertainty 0.004
-set runname net                  
+set runname "net"                  
 
 
 define_design_lib WORK -path ./WORK
 
-#*********************************************************
-#*   below here shouldn't need to be changed...          *
-#*********************************************************
-
+#
 # Analyze and Elaborate the HDL files
-# set_attribute hdl_language vhdl
+#
 analyze -format verilog $src_folder/detector110.v
 
 elaborate ${base_name}
 current_design ${base_name}
 link
 uniquify
-
-
-# Apply Constraints and generate clocks
 
 
 #
@@ -69,7 +63,7 @@ set_wire_load_model -name 5K_hvratio_1_1 -library NangateOpenCellLibrary
 # Design synthesis
 #
 
-## If you want to ungroup >>
+## If you want to ungroup, uncomment this>>
 #ungroup -all -flatten
 
 compile -map_effort high
@@ -78,11 +72,11 @@ compile -incremental_mapping -map_effort high
 #
 # Design report
 #
-check_design > ./report/check_design_${base_name}_${runname}.txt 
-report_qor > ./report/summary_report_${base_name}_${runname}.txt
-report_area -hierarchy > ./report/report_area_${base_name}_${runname}.txt
-report_timing > ./report/report_timing_${base_name}_${runname}.txt
-report_power -verbose > ./report/report_power_${base_name}_${runname}.txt
+check_design > ./reports/check_design_${base_name}_${runname}.txt 
+report_qor > ./reports/summary_report_${base_name}_${runname}.txt
+report_area -hierarchy > ./reports/report_area_${base_name}_${runname}.txt
+report_timing > ./reports/report_timing_${base_name}_${runname}.txt
+report_power -verbose > ./reports/report_power_${base_name}_${runname}.txt
 
 #
 # Output

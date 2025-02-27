@@ -10,6 +10,7 @@ prerequisite
 
 - Modelsim
 - Cadence Genus
+- Design Compiler (Synopsys)
 - Cadence Innovus
 - Nangate 45nm library
 

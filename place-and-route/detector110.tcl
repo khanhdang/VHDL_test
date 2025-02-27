@@ -48,13 +48,15 @@ report_timing -unconstrained -delay_limit 20 > ./reports/timing_report_postCCopt
 
 routeDesign -globalDetail
 
-addFiller -prefix FILLER -cell FILL
+addFiller -prefix FILLER -cell FILLCELL_X1 FILLCELL_X2 FILLCELL_X4
 
 verifyConnectivity -type all -error 1000 -warning 50 -report ./reports/top.connect
 verifyGeometry -report ./reports/top.geo
 verify_drc   -report ./reports/top_soc.drc
 
 defOut -floorplan -netlist -routing ./output_files/$model_name.def
+write_sdf -interconn all -setuphold split ./output_files/$model_name.sdf
+rcOut -spef ./output_files/$model_name.spef
 saveNetlist ./output_files/$model_name.v
 
 puts "Finish!!!"

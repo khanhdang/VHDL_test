@@ -1,7 +1,7 @@
 EDA Tool Test @ Univ. of Aizu
 ========
 
-This repo consists of a Moore FSM code for detecting "110" written in VHDL.
+This repo consists of a Moore FSM code for detecting "110" written in VHDL and Verilog HDL.
 Simulation script using ModelSim is include
 Synthesis (using Cadence Genus) and layout using (Cadence Innous) scripts and results are included.
 
@@ -10,6 +10,7 @@ prerequisite
 
 - Modelsim
 - Cadence Genus
+- Design Compiler (Synopsys)
 - Cadence Innovus
 - Nangate 45nm library
 
@@ -23,7 +24,10 @@ Simulation
 
 To simulate, open ModelSim and change the directory to the ```simulation``` folder.
 Run ```do sim_VHDL.do``` to run the VHDL model.
-Or Run ```do sim_VHDL.do``` to run the verilog model.
+Or Run ```do sim_Verilog.do``` to run the verilog model.
+
+
+Note: Makefile is included
 
 Synthesis
 ---------
@@ -36,9 +40,10 @@ or
 
 Reports and outputs can be founded in the ```synthesis``` folder.
 
+Note: Makefile is included
 
 
-Place and router
+Place and route
 ---------
 
 Open Cadence Innovus. Change to the ```place-and-route``` folder
@@ -47,6 +52,7 @@ Open Cadence Innovus. Change to the ```place-and-route``` folder
 
 Reports and outputs can be founded in the ```place-and-route``` folder.
 
+Note: Makefile is included
 
 
 Result
